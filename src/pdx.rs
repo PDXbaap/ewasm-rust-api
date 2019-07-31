@@ -12,7 +12,7 @@ extern "C" {
 
 // PUT Key->Val
 //pub fn storage_store2(key: &[u8], keyLen: u32, value: &[u8], valueLen: u32) {
-pub fn storage_store2(key: &[u8], value: &[u8]) {
+pub fn storage_store(key: &[u8], value: &[u8]) {
     let key_len = key.len();
     let value_len = value.len();
     unsafe {
@@ -25,7 +25,7 @@ pub fn storage_store2(key: &[u8], value: &[u8]) {
     }
 }
 
-pub fn storage_load2(key: &[u8]) -> Vec<u8> {
+pub fn storage_load(key: &[u8]) -> Vec<u8> {
     let key_len = key.len();
     let mut val_len: [u8; 32] = [0; 32];
     unsafe {

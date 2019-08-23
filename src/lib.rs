@@ -45,6 +45,9 @@ cfg_if! {
 mod native;
 mod utils;
 
+pub extern crate ethabi;
+
+//pub extern crate rustc_hex;
 pub mod pdx;
 pub mod types;
 

@@ -70,11 +70,12 @@ impl<'a> Visitor<'a> for ContractVisitor {
 }
 
 impl Contract {
+    /*
     /// Loads contract from json.
     pub fn load<T: io::Read>(reader: T) -> errors::Result<Self> {
         let c = serde_json::from_reader(reader).map_err(From::from);
         return c;
-    }
+    }*/
 
     /// Creates constructor call builder.
     pub fn constructor(&self) -> Option<&Constructor> {
